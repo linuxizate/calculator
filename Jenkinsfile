@@ -22,12 +22,12 @@ pipeline {
    }
    stage("Docker build") {
       steps {
-        sh "docker build -t calculator:${BUILD_TIMESTAMP} ."
+        sh "docker build -t calculator ."
      }
    }
    stage("Docker push") {
       steps {
-        sh "docker push localhost:5000/calculator:${BUILD_TIMESTAMP}"
+        sh "docker push localhost:5000/calculator}"
       }
    }
  }
