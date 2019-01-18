@@ -30,7 +30,7 @@ pipeline {
 	sh "docker tag calculator localhost:5000/calculator"
       }
    }
-   stage("Docker push") {
+   stage("Docker push to our repository") {
       steps {
         sh "docker push localhost:5000/calculator"
       }
